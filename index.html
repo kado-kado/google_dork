@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Google Dork ツール（Web版）</title>
+  <link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+
+  <h1>Google Dork ツール（Web版）</h1>
+
+  <div class="section">
+    <h2>テンプレートから選ぶ</h2>
+    <label>カテゴリ選択</label>
+    <select id="categorySelect"></select>
+
+    <label>テンプレート選択</label>
+    <select id="templateSelect"></select>
+
+    <button onclick="useTemplate()">テンプレートを使用</button>
+  </div>
+
+  <div class="section">
+    <h2>カスタムDorkを作成</h2>
+    <label>キーワード（カンマ区切り）</label>
+    <input type="text" id="keywordsInput" placeholder="admin, login, password" />
+
+    <label>検索タイプ</label>
+    <select id="fieldSelect">
+      <option>intitle</option>
+      <option>inurl</option>
+      <option>intext</option>
+      <option>filetype</option>
+      <option>site</option>
+      <option>text</option>
+    </select>
+
+    <label>論理演算子</label>
+    <select id="logicSelect">
+      <option>AND</option>
+      <option>OR</option>
+    </select>
+
+    <button onclick="generateCustomDork()">カスタムDorkを生成</button>
+  </div>
+
+  <div class="section">
+    <h2>結果</h2>
+    <div class="result" id="resultBox">ここに結果が表示されます</div>
+    <button onclick="searchGoogle()">Googleで検索</button>
+  </div>
+
+  <script src="web/script.js"></script>
+
+</body>
+</html>
